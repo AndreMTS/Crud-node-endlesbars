@@ -1,12 +1,12 @@
 const express = require("express");
 const app = express();
-const handlebars = require("express-handlebars");
+const handlebars  = require('express-handlebars');
 
 
 //Config
 
-    //Template Engine
-    app.engine('handlebars',handlebars({defaultLayout:"main"}))
+    //Template Engine    
+    app.engine('handlebars', handlebars.engine({defaultLayout: 'main'}));
     app.set('view engine', 'handlebars');
     
     //Conexão com banco de dados
@@ -18,7 +18,7 @@ const handlebars = require("express-handlebars");
 
 //rotas
     app.get('/cadastro', function(req, res){
-        res.send('ROTA DE CADASTRO DE POSTS')
+        res.send('ROTA DE CADASTRO DE POSTSddd')
     })
 
 app.listen(8081, function(){
